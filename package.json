@@ -1,0 +1,19 @@
+{
+  "name": "guessthelanguage",
+  "version": "1.0.0",
+  "description": "Web app where users can guess a language displayed on the screen",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoahLloyd/guessTheLanguage.git"
+  },
+  "author": "Noah Lloyd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NoahLloyd/guessTheLanguage/issues"
+  },
+  "homepage": "https://github.com/NoahLloyd/guessTheLanguage#readme"
+}
