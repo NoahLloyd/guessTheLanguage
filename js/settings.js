@@ -9,10 +9,10 @@ const updateLanguageAmountDisplay = (value) => {
     if (parseInt(value) < 3) {
         languageAmountChoice.value = '3';
         languageAmountChoiceDisplay.classList.add('language-choice-error')
-        languageAmountDisplayContainer.classList.add('language-amount-error')
+        languageAmountDifficulty.textContent = valueDifficulty(parseInt(value))
+
         setTimeout(() => {
             languageAmountChoiceDisplay.textContent = languageAmountChoice.value
-            languageAmountDifficulty.textContent = valueDifficulty(parseInt(value))
             languageAmountChoiceDisplay.classList.remove('language-choice-error')
 
         }, 2000)

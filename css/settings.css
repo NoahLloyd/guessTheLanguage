@@ -19,11 +19,7 @@
 }
 
 .language-amount-error {
-    display: none;    
-}
-
-.language-amount-error::after {
-    content: 'Minimun number of languages is 3'
+    display: none;
 }
 
 .extreme {
