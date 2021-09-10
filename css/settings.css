@@ -14,12 +14,28 @@
 
 .languageAmount-difficulty {
     color: white;
-    padding: 3px;
+    padding: 5px;
     border-radius: 5px;
 }
 
 .language-amount-error {
     display: none;
+    font-weight: bold;
+    color: red;
+    font-size: 1rem;
+}
+
+
+.easy {
+    background-color: #228822;
+}
+
+.medium {
+    background-color: #888822;
+}
+
+.hard {
+    background-color: #882222;
 }
 
 .extreme {

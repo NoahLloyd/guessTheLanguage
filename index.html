@@ -9,11 +9,14 @@
     <link rel="stylesheet" href="/css/home.css" />
     <link rel="stylesheet" href="/css/leaderboard.css">
     <link rel="stylesheet" href="/css/settings.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <script src="/js/index.js" defer></script>
     <script src="/js/settings.js" defer></script>
     <script src="/js/leaderboard.js" defer></script>
+    <script src="/js/music.js" defer></script>
   </head>
   <body>
+    <div class="primary">
     <section class="settings">
       <h2 class="language-amount-title">Number of languages</h2>
       <input
@@ -65,7 +68,7 @@
         </p>
       </article>
       <article class="language-options">
-        <button class="language-option" onclick="languageGuess(innerHTML)">Danish</button>
+        <button class="language-option" onclick="languageGuess(innerHTML)">Latin</button>
         <button class="language-option" onclick="languageGuess(innerHTML)">English</button
         ><button class="language-option" onclick="languageGuess(innerHTML)">French</button>
       </article>
@@ -130,5 +133,15 @@
         </tr>
       </table>
     </section>
+  </div>
+    <footer class="footer">
+      <ul class="navigation">
+        <li><a href="./music/music.html" target="_blank" rel="noopener noreferrer">Music</a></li>
+        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">Important</a></li>
+        <li><a href="https://github.com/NoahLloyd" target="_blank" rel="noopener noreferrer">Creator</a></li>
+      </ul>
+    </footer>
+    <article id="music-container">
+    </article>
   </body>
 </html>
