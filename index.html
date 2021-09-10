@@ -5,26 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess the language</title>
-    <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="./css/home.css" />
-    <script src="./js/index.js" defer></script>
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/leaderboard.css">
+    <link rel="stylesheet" href="/css/settings.css">
+    <script src="/js/index.js" defer></script>
+    <script src="/js/settings.js" defer></script>
+    <script src="/js/leaderboard.js" defer></script>
   </head>
   <body>
+    <section class="settings">
+      <h2 class="language-amount-title">Number of languages</h2>
+      <input
+        type="range"
+        id="languageAmountChoice"
+        class="slider"
+        value="10"
+        onchange="updateLanguageAmountDisplay(value)"
+      />
+      <h4 id=languageAmountDispaly-container><span class="language-amount-choice-display" id="languageAmountChoiceDisplay">10</span> languages: <span class="languageAmount-difficulty easy" id="languageAmount-difficulty">easy</span></h4>
+    </section>
     <main class="main">
-      <section>
-        <input
-          type="range"
-          id="languageAmountChoice"
-          class="slider"
-          value="10"
-          onchange="updateLanguageAmountDisplay(value)"
-        />
-        <h4 id="languageAmountChoiceDisplay">10: Easy</h4>
-      </section>
+
       <h1 class="title">Guess the language</h1>
       <p class="explanation">
-        With 40 different languages to guess, attempt to see which ones you might know. There will
-        be 3 different options on each language
+        With up to 100 different languages to guess, attempt to see which ones you might know. There will
+        be 3 different options on each language. See how many languages you can guess!
       </p>
       <div class="correct" id="correct">
         <svg

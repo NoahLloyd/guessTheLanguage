@@ -3,35 +3,44 @@
 }
 
 body {
+  display: flex;
+  justify-content: space-between;
   background-color: var(--color-1);
   margin: 0;
-  text-align: center;
   font-family: "Urbanist", sans-serif;
 }
 
 .main {
-  width: 80%;
+  width: 60%;
   text-align: center;
   margin: 0;
   display: inline-block;
 }
 
 .title {
+  display: inline-block;
+  text-align: center;
   color: white;
 }
 
 .explanation {
+  text-align: center;
   color: var(--color-3);
-  margin: 20px 15vw;
 }
 
 .text-container {
+  display: inline-block;
   width: 100%;
   background-color: var(--color-2);
   padding: 3px 10px 6px 10px;
   border-radius: 20px;
-  margin: 2% auto;
+  margin: 2% 0;
   text-align: left;
+}
+
+.language-options {
+  display: flex;
+  justify-content: space-between;
 }
 
 .language-option {
@@ -67,58 +76,5 @@ body {
   transition: opacity 200ms ease;
 }
 
-.scores {
-  display: inline-block;
-  font-size: 1.5rem;
-}
-
-.scores-title {
-  font-size: 1.7rem;
-}
-
-.top-scores {
-}
-
-.table-row {
-  background-color: var(--color-4);
-
-  text-align: left;
-  outline: 3px black solid;
-  margin: 10px;
-  display: block;
-  margin: 10px 0;
-}
-
-.table-row > td {
-  display: inline-block;
-  margin: 0 0 0 5px;
-  padding: 0;
-}
-
 @media (min-width: 1100px) {
-  .text-container {
-    width: 50%;
-  }
-  .explanation {
-    width: 50%;
-    margin: 0 auto;
-  }
-  .language-option {
-    width: 12.5%;
-  }
-}
-
-@media (max-width: 550px) {
-  .language-option {
-    display: block;
-    margin: 15px auto;
-    width: 80%;
-  }
-  .language-options {
-    text-align: center;
-    margin: 0 auto;
-  }
-  .scores {
-    display: block;
-  }
 }

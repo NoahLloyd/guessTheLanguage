@@ -1,0 +1,32 @@
+.scores {
+    display: inline-block;
+    text-align: center;
+    margin: 30px auto;
+    
+    font-size: 1.5rem;
+  }
+  
+  .scores-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.7rem;
+  }
+  
+  .top-scores {
+    display: inline-block;
+  }
+  
+  .table-row {
+    background-color: var(--color-4);
+  
+    text-align: left;
+    outline: 3px black solid;
+    margin: 10px;
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .table-row > td {
+    display: inline-block;
+    margin: 0 0 0 5px;
+    padding: 0;
+  }
