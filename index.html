@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the language</title>
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <script src="./js/index.js" defer></script>
+  </head>
+  <body>
+    <main class="main">
+      <h1 class="title">Guess the language</h1>
+      <p class="explanation">
+        With 40 different languages to guess, attempt to see which ones you might know. There will
+        be 3 different options on each language
+      </p>
+      <div class="correct" id="correct">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="100"
+          height="100"
+          viewBox="0 0 24 24"
+          fill="green"
+        >
+          <path
+            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.25 17.292l-4.5-4.364 1.857-1.858 2.643 2.506 5.643-5.784 1.857 1.857-7.5 7.643z"
+          />
+        </svg>
+      </div>
+      <div class="incorrect" id="incorrect">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="100"
+          height="100"
+          viewBox="0 0 24 24"
+          fill="red"
+        >
+          <path
+            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z"
+          />
+        </svg>
+      </div>
+      <article class="text-container">
+        <p class="text">
+          Sørens familie kommer fra Fyn. Hans forældre har et dejligt hus nord for Odense. Sørens
+          far hedder Poul. Poul er også håndværker, han er murer, ogasdsadasdadasdsadadadadadasdad
+          ssa dadd ad as da a das da das har sit eget firma med 3 ansatte. Sørens mor hedder Mette,
+          og hun er lærer. Søren har en stor familie. Han har 4 søskende, en storesøster, en
+          storebror, en lillebror og en lillesøster.
+        </p>
+      </article>
+      <article class="language-options">
+        <button class="language-option" onclick="languageGuess(innerHTML)">Danish</button>
+        <button class="language-option" onclick="languageGuess(innerHTML)">English</button
+        ><button class="language-option" onclick="languageGuess(innerHTML)">French</button>
+      </article>
+      <section class="score">
+        <article class="points">
+          <h4 class="points-label">Points: <span class="points-number">152</span></h4>
+        </article>
+      </section>
+    </main>
+    <section class="scores">
+      <h2 class="scores-title">Top scores today</h2>
+      <table class="top-scores">
+        <tr class="table-row">
+          <td>1</td>
+          <td>Lorem.</td>
+          <td>Voluptas?</td>
+        </tr>
+        <tr class="table-row">
+          <td>2</td>
+          <td>Lorem.</td>
+          <td>Tempora.</td>
+        </tr>
+        <tr class="table-row">
+          <td>2</td>
+          <td>Lorem.</td>
+          <td>Blanditiis.</td>
+        </tr>
+        <tr class="table-row">
+          <td>3</td>
+          <td>Lorem.</td>
+          <td>Distinctio!</td>
+        </tr>
+        <tr class="table-row">
+          <td>4</td>
+          <td>Lorem.</td>
+          <td>Ut?</td>
+        </tr>
+        <tr class="table-row">
+          <td>5</td>
+          <td>Lorem.</td>
+          <td>Dolor!</td>
+        </tr>
+        <tr class="table-row">
+          <td>6</td>
+          <td>Lorem.</td>
+          <td>Voluptatem.</td>
+        </tr>
+        <tr class="table-row">
+          <td>7</td>
+          <td>Lorem.</td>
+          <td>Itaque?</td>
+        </tr>
+        <tr class="table-row">
+          <td>8</td>
+          <td>Lorem.</td>
+          <td>Fuga!</td>
+        </tr>
+        <tr class="table-row">
+          <td>9</td>
+          <td>Lorem.</td>
+          <td>Perferendis.</td>
+        </tr>
+      </table>
+    </section>
+  </body>
+</html>
