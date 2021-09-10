@@ -11,6 +11,16 @@
   </head>
   <body>
     <main class="main">
+      <section>
+        <input
+          type="range"
+          id="languageAmountChoice"
+          class="slider"
+          value="10"
+          onchange="updateLanguageAmountDisplay(value)"
+        />
+        <h4 id="languageAmountChoiceDisplay">10: Easy</h4>
+      </section>
       <h1 class="title">Guess the language</h1>
       <p class="explanation">
         With 40 different languages to guess, attempt to see which ones you might know. There will
