@@ -28,10 +28,13 @@ const changeMusic = (previousSong) => {
 //* Using Javascript Audio object
 const addNewSong = previousSong => {
     const nextSong = new Audio(`../music/${previousSong}.mp3`)
+    nextSong.volume = '0.5'
     nextSong.play()
-    nextSong.onended = changeMusic(nextSong.src)
+    nextSong.addEventListener('ended', () => changeMusic(nextSong.src) )
     console.log(nextSong)
 }
+
+
 
 const toggleMusic = () => {
     musicOn = !musicOn

@@ -2,8 +2,6 @@ const correct = document.getElementById("correct");
 const incorrect = document.getElementById("incorrect");
 const correctSound = new Audio('../music/correct.mp3')
 const incorrectSound = new Audio('../music/incorrect.mp3')
-correctSound.volume = '2'
-incorrectSound.volume = '2'
 let language = 'Latin'
 let soundsOn = true
 
