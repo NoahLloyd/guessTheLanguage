@@ -2,7 +2,10 @@ const correct = document.getElementById("correct");
 const incorrect = document.getElementById("incorrect");
 const correctSound = new Audio('../music/correct.mp3')
 const incorrectSound = new Audio('../music/incorrect.mp3')
-
+correctSound.volume = '2'
+incorrectSound.volume = '2'
+let language = 'Latin'
+let soundsOn = true
 
 const languageGuess = (languageGuessed) => {
   if (languageGuessed === language) {
@@ -13,7 +16,9 @@ const languageGuess = (languageGuessed) => {
 };
 
 const displayVerificationOfGuess = (symbol) => {
+  if (soundsOn) {
   symbol === correct ? correctSound.play() : incorrectSound.play()
+  }
   symbol.classList.add("show");
   setTimeout(() => {
     symbol.classList.remove("show");
@@ -39,4 +44,8 @@ const translationJson = await translation.json()
 console.log(translationJson)
 }
 
+
+const toggleSounds = () => {
+  soundsOn = !soundsOn
+}
 // translateText('asd')

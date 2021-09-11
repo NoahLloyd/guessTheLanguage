@@ -4,21 +4,22 @@ const languageAmountDifficulty = document.getElementById('languageAmount-difficu
 const languageAmountDisplayContainer = document.getElementById('languageAmountDisplay-container')
 const languageAmountError = document.getElementById('languageAmountError')
 
+
 let language = "Latin";
 const updateLanguageAmountDisplay = (value) => {
     // Handle attempts of setting less than 3 languages
     if (parseInt(value) < 3) {
         languageAmountChoice.value = '3';
 
-
-        languageAmountChoiceDisplay.style.display = 'none'
+        //TODO: fix bug; Set the whole display container to display none
+        languageAmountDisplayContainer.style.display = 'none'
         languageAmountError.style.display = 'block'
             
         setTimeout(() => {
             languageAmountChoiceDisplay.style.display = 'inline-block'
             languageAmountChoiceDisplay.textContent = languageAmountChoice.value
         languageAmountError.style.display = 'none'
-
+                
         }, 2000)
     }
     // 

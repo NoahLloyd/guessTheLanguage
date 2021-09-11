@@ -18,8 +18,8 @@
   <body>
     <div class="primary">
     <section class="settings">
-      <article>
-      <h2 class="language-amount-title">Number of languages</h2>
+      <article class="settings-section">
+      <h2 class="settings-title">Number of languages</h2>
       <input
         type="range"
         id="languageAmountChoice"
@@ -30,9 +30,18 @@
       <h4 id=languageAmountDispaly-container><span class="language-amount-choice-display" id="languageAmountChoiceDisplay">10</span> languages: <span class="languageAmount-difficulty easy" id="languageAmount-difficulty">easy</span></h4>
       <h4 class="language-amount-error" id="languageAmountError">Minimum 3 languages required</h4>
     </article>
-    <article>
-      <h2 class="toggle-music-title">Music and sounds</h2>
-      <input type="checkbox" class="toggle-music" id="toggleMusic">
+    <article class="settings-section">
+      <h2 class="settings-title">Music and sounds</h2>
+      <section class="toggle-audio">
+      <div class="audio-toggle-container">
+      <label for="toggleMusic">Music</label>
+      <input type="checkbox" checked="true" onchange="toggleMusic()" class="toggle-music" id="toggleMusic">
+    </div>
+    <div class="audio-toggle-container">
+      <label for="toggleSounds">Sounds</label>
+      <input type="checkbox" checked="true" onchange="toggleSounds()" name="Toggle spinds" id="toggleSounds">
+    </div>
+  </section>
     </article>
     </section>
     <main class="main">
