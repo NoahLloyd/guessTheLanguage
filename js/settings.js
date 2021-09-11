@@ -5,7 +5,6 @@ const languageAmountDisplayContainer = document.getElementById('languageAmountDi
 const languageAmountError = document.getElementById('languageAmountError')
 
 
-let language = "Latin";
 const updateLanguageAmountDisplay = (value) => {
     // Handle attempts of setting less than 3 languages
     if (parseInt(value) < 3) {
@@ -30,6 +29,7 @@ const updateLanguageAmountDisplay = (value) => {
     languageAmountDifficulty.classList.add(difficulty)
 };
 
+
 const valueDifficulty = (value) => {
     if (value < 15) {
         return "easy";
@@ -45,3 +45,5 @@ const valueDifficulty = (value) => {
     }
     return "ultimate";
 };
+
+languageAmountChoice.addEventListener('change', () => {updateLanguageAmountDisplay(languageAmountChoice.value)})
