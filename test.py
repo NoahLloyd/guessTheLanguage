@@ -105,7 +105,6 @@ asd = []
 for i in langs:
     asd.append(i.split(' '))
 for i in asd:
-    i[0] = i[0].lower()
     i[1] = "'"+i[1]+"'"
     result += f'{i[0]}: {i[1]},'
 
