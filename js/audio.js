@@ -4,7 +4,7 @@ const music = ['elegantlyDisconnected', 'ready', 'icedTea', 'easy']
 let musicOn = true
 
 const changeMusic = (previousSong) => {
-    previousSong = previousSong.replace('/music/', '').replace('.mp3','')
+    previousSong = previousSong.replace('/audio/', '').replace('.mp3','')
 
     // Loop again if we reached the end
     if (previousSong === 'easy') {
@@ -27,10 +27,9 @@ const changeMusic = (previousSong) => {
 
 //* Using Javascript Audio object
 const addNewSong = previousSong => {
-    const nextSong = new Audio(`../music/${previousSong}.mp3`)
+    const nextSong = new Audio(`../audio/${previousSong}.mp3`)
     nextSong.volume = '0.5'
     nextSong.play()
-    nextSong.addEventListener('ended', () => changeMusic(nextSong.src) )
     console.log(nextSong)
 }
 

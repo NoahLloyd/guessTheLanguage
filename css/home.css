@@ -4,10 +4,20 @@
 
 body {
   margin: 0;
+  overflow: hidden;
   font-family: 'Urbanist', sans-serif;
   background-color: var(--color-1);
 }
 
+/* * Hide scroll bar but still be able to scroll */
+html {
+  scroll-behavior: smooth;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+}
 .primary {
   display: flex;
   justify-content: space-between;
@@ -16,6 +26,7 @@ body {
 
 .main {
   width: 60%;
+  height: 100vh;
   text-align: center;
   margin: 0;
   display: inline-block;

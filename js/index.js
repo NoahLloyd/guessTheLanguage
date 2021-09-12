@@ -1,7 +1,7 @@
 const correct = document.getElementById("correct");
 const incorrect = document.getElementById("incorrect");
-const correctSound = new Audio('../music/correct.mp3')
-const incorrectSound = new Audio('../music/incorrect.mp3')
+const correctSound = new Audio('../audio/correct.mp3')
+const incorrectSound = new Audio('../audio/incorrect.mp3')
 let language = 'Latin'
 let soundsOn = true
 
@@ -24,6 +24,7 @@ const displayVerificationOfGuess = (symbol) => {
 };
 
 const translateText =  async (text) => {
+  try {
   const translation = await fetch("https://google-translate1.p.rapidapi.com/language/translate/v2", {
 	"method": "POST",
 	"headers": {
@@ -40,6 +41,9 @@ const translateText =  async (text) => {
 })
 const translationJson = await translation.json()
 console.log(translationJson)
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 

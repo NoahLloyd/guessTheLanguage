@@ -47,3 +47,5 @@ const valueDifficulty = (value) => {
 };
 
 languageAmountChoice.addEventListener('change', () => {updateLanguageAmountDisplay(languageAmountChoice.value)})
+
+// TODO: Add more settings. Ideas: Choose specific regions (Europe, Africa, Asia), Color settings?, Share somewhere (facebook, twitter)
