@@ -1,7 +1,7 @@
 # Guess the Language
 ## Web game for guessing languages displayed in text
 
-Demo: [guessLanguage.netlify.com](https://guessLanguage.netlify.com)
+Demo: [guessLanguage.netlify.com](https://guess-language.netlify.com)
 
 ### The app is built in vanilla HTML, CSS and JS. I built it like this to improve on my vanilla language skills, especially css, but I also got to train asynchronous javascript and using API's.
 ---
@@ -14,7 +14,7 @@ Demo: [guessLanguage.netlify.com](https://guessLanguage.netlify.com)
 &nbsp;
 ## Other things which are used include
 - [Website logo](https://www.flaticon.com/)
-- [Down arrow icon](https://www.svgrepo.com/svg/304563/arrow-down)
+- [Extend arrow icon](https://www.svgrepo.com/svg/304563/arrow-down)
 - [Validation sounds](https://freesound.org/)
 ---
 >   Author: Noah Lloyd
