@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="/css/settings.css" />
     <link rel="stylesheet" href="/css/footer.css" />
     <link rel="stylesheet" href="/css/about.css" />
+    <link rel="stylesheet" href="/css/checkmark.css">
     <script src="/js/index.js" defer></script>
     <script src="/js/verification.js" defer></script>
     <script src="/js/settings.js" defer></script>
@@ -39,7 +40,7 @@
   </head>
   <body>
     <div class="primary">
-      <section class="settings">
+      <aside class="settings">
         <h1 class="settings-title">Settings</h1>
         <article class="settings-section">
           <h2 class="setting-title">Number of languages</h2>
@@ -70,18 +71,22 @@
           <h2 class="setting-title">Music and sounds</h2>
           <section class="toggle-audio">
             <div class="audio-toggle-container">
-              <label for="toggleMusic">Music</label>
+            <label for="toggleMusic">Music</label>
+
               <input
+              class="checkmark"
                 type="checkbox"
                 checked="true"
-                onchange="toggleMusic()"
+                onclick="toggleMusic()"
                 class="toggle-music"
                 id="toggleMusic"
               />
             </div>
             <div class="audio-toggle-container">
-              <label for="toggleSounds">Sounds</label>
+            <label for="toggleSounds">Sounds</label>
+
               <input
+              class="chackmark"
                 type="checkbox"
                 checked="true"
                 onchange="toggleSounds()"
@@ -91,8 +96,12 @@
             </div>
           </section>
         </article>
-      <img src="/images/logo/logo.png" alt="Logo for Guess the Language" class="logo">
-      </section>
+        <img
+          src="/images/logo/logo.png"
+          alt="Logo for Guess the Language"
+          class="logo"
+        />
+      </aside>
       <main class="main">
         <h1 class="title">Guess the language</h1>
         <p class="explanation">
@@ -127,60 +136,111 @@
           </svg>
         </div>
         <section class="text-box" id="textBox">
-        <article class="text-container" id="text" onclick="classList.add('extended')">
-          <p class="text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas,
-            quaerat. Ullam beatae repudiandae tempora vitae odit accusantium
-            tenetur tempore sit deleniti soluta labore repellendus, perferendis
-            necessitatibus quibusdam quod debitis culpa accusamus, veniam
-            molestiae! Ratione ut est iusto non harum, doloribus voluptatibus.
-            Recusandae pariatur tenetur nam numquam reprehenderit eveniet, quis
-            voluptas facilis quae magnam, architecto perspiciatis, ut minus
-            officiis neque omnis. Magnam quod qui beatae mollitia consectetur
-            repudiandae dolore culpa, quam tempore expedita modi impedit saepe
-            non amet iusto dolorum ullam fuga cum natus! Iste omnis rerum esse
-            dolore ab rem soluta illo minima doloremque aut magni consectetur
-            voluptas, eos ipsa unde sit quae quas doloribus non nostrum quo.
-            Ducimus, est! Dignissimos praesentium, nesciunt porro minus ex
-            maxime a placeat ipsum veniam ad perspiciatis voluptates aperiam ut
-            quod similique dicta molestias ea corporis earum ab nisi quaerat
-            sint ducimus. Sed obcaecati expedita dolor? Consequuntur nostrum
-            ullam aliquid adipisci? Deserunt laborum illum eius, quo alias quasi
-            et facere dolorum aliquid iusto cupiditate quibusdam possimus
-            doloribus perferendis accusamus accusantium ratione inventore
-            incidunt recusandae fugiat quos minima autem corrupti. Ipsum dolorem
-            aperiam exercitationem mollitia natus, saepe reiciendis consectetur
-            culpa sit nemo doloremque. Pariatur nemo itaque adipisci
-            repudiandae? Nisi doloribus enim quae? Ut ratione corporis
-            voluptatum laborum nobis commodi consequuntur! Ducimus quasi, animi
-            cum excepturi ipsum inventore sed tempora alias rerum, fugiat, in
-            omnis reiciendis velit voluptatem exercitationem! Molestiae cum
-            debitis magnam commodi in totam ullam, adipisci optio consequuntur
-            sunt minus neque beatae autem quos? Quasi esse iure, deserunt fugit
-            dolore mollitia reprehenderit ipsam praesentium provident doloribus
-            dignissimos ipsa deleniti facilis minima earum aut. Corporis maiores
-            quae nam doloremque hic recusandae rerum magni nihil voluptate ab
-            maxime voluptates, sed, error enim? Mollitia, incidunt! Hic
-            excepturi aliquid mollitia blanditiis libero, minima sit. Corrupti
-            doloribus est dolorem! Fuga obcaecati laborum, possimus atque odit
-            perferendis illum laudantium iure.
-          </p>
-        </article>
-        <div class="extend"><svg id="extend" onclick="document.getElementById('text').classList.add('extended')" width="48px" height="48px" viewBox="0 0 24 24" id="arrow_down" data-name="arrow down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <defs>
-            <clipPath id="clip-path">
-              <rect id="Mask" width="24" height="24" fill="none" stroke="#000" stroke-width="1"/>
-            </clipPath>
-          </defs>
-          <g id="_20x20_arrow-back--grey" data-name="20x20/arrow-back--grey" transform="translate(0 24) rotate(-90)">
-            <rect id="Mask-2" data-name="Mask" width="24" height="24" fill="none"/>
-            <g id="_20x20_arrow-back--grey-2" data-name="20x20/arrow-back--grey" clip-path="url(#clip-path)">
-              <g id="Group_2" data-name="Group 2" transform="translate(8 7)">
-                <path id="Rectangle" d="M0,6.586V0H6.586" transform="translate(0.686 5.157) rotate(-45)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.5"/>
+          <article
+            class="text-container"
+            id="text"
+            onclick="classList.add('extended')"
+          >
+            <p class="text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptas, quaerat. Ullam beatae repudiandae tempora vitae odit
+              accusantium tenetur tempore sit deleniti soluta labore
+              repellendus, perferendis necessitatibus quibusdam quod debitis
+              culpa accusamus, veniam molestiae! Ratione ut est iusto non harum,
+              doloribus voluptatibus. Recusandae pariatur tenetur nam numquam
+              reprehenderit eveniet, quis voluptas facilis quae magnam,
+              architecto perspiciatis, ut minus officiis neque omnis. Magnam
+              quod qui beatae mollitia consectetur repudiandae dolore culpa,
+              quam tempore expedita modi impedit saepe non amet iusto dolorum
+              ullam fuga cum natus! Iste omnis rerum esse dolore ab rem soluta
+              illo minima doloremque aut magni consectetur voluptas, eos ipsa
+              unde sit quae quas doloribus non nostrum quo. Ducimus, est!
+              Dignissimos praesentium, nesciunt porro minus ex maxime a placeat
+              ipsum veniam ad perspiciatis voluptates aperiam ut quod similique
+              dicta molestias ea corporis earum ab nisi quaerat sint ducimus.
+              Sed obcaecati expedita dolor? Consequuntur nostrum ullam aliquid
+              adipisci? Deserunt laborum illum eius, quo alias quasi et facere
+              dolorum aliquid iusto cupiditate quibusdam possimus doloribus
+              perferendis accusamus accusantium ratione inventore incidunt
+              recusandae fugiat quos minima autem corrupti. Ipsum dolorem
+              aperiam exercitationem mollitia natus, saepe reiciendis
+              consectetur culpa sit nemo doloremque. Pariatur nemo itaque
+              adipisci repudiandae? Nisi doloribus enim quae? Ut ratione
+              corporis voluptatum laborum nobis commodi consequuntur! Ducimus
+              quasi, animi cum excepturi ipsum inventore sed tempora alias
+              rerum, fugiat, in omnis reiciendis velit voluptatem
+              exercitationem! Molestiae cum debitis magnam commodi in totam
+              ullam, adipisci optio consequuntur sunt minus neque beatae autem
+              quos? Quasi esse iure, deserunt fugit dolore mollitia
+              reprehenderit ipsam praesentium provident doloribus dignissimos
+              ipsa deleniti facilis minima earum aut. Corporis maiores quae nam
+              doloremque hic recusandae rerum magni nihil voluptate ab maxime
+              voluptates, sed, error enim? Mollitia, incidunt! Hic excepturi
+              aliquid mollitia blanditiis libero, minima sit. Corrupti doloribus
+              est dolorem! Fuga obcaecati laborum, possimus atque odit
+              perferendis illum laudantium iure.
+            </p>
+          </article>
+          <div class="extend">
+            <svg
+              id="extend"
+              onclick="document.getElementById('text').classList.add('extended')"
+              width="48px"
+              height="48px"
+              viewBox="0 0 24 24"
+              id="arrow_down"
+              data-name="arrow down"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <defs>
+                <clipPath id="clip-path">
+                  <rect
+                    id="Mask"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="1"
+                  />
+                </clipPath>
+              </defs>
+              <g
+                id="_20x20_arrow-back--grey"
+                data-name="20x20/arrow-back--grey"
+                transform="translate(0 24) rotate(-90)"
+              >
+                <rect
+                  id="Mask-2"
+                  data-name="Mask"
+                  width="24"
+                  height="24"
+                  fill="none"
+                />
+                <g
+                  id="_20x20_arrow-back--grey-2"
+                  data-name="20x20/arrow-back--grey"
+                  clip-path="url(#clip-path)"
+                >
+                  <g
+                    id="Group_2"
+                    data-name="Group 2"
+                    transform="translate(8 7)"
+                  >
+                    <path
+                      id="Rectangle"
+                      d="M0,6.586V0H6.586"
+                      transform="translate(0.686 5.157) rotate(-45)"
+                      fill="none"
+                      stroke="#000"
+                      stroke-miterlimit="10"
+                      stroke-width="1.5"
+                    />
+                  </g>
+                </g>
               </g>
-            </g>
-          </g>
-        </svg></div>
+            </svg>
+          </div>
         </section>
         <article class="language-options">
           <button
@@ -258,7 +318,7 @@
           <tr class="table-row">
             <td class="leaderboard-index">9</td>
             <td class="leaderboard-name">Lorem.</td>
-            <td class="leaderboard-score">Perferendis.</td>
+            <td class="leaderboard-score">o</td>
           </tr>
           <tr class="table-row">
             <td class="leaderboard-index">10</td>
@@ -267,7 +327,17 @@
           </tr>
         </table>
       </section>
+      <iframe
+      id="music"
+      width="0"
+      height="0"
+      src="https://www.youtube.com/embed/5qap5aO4i9A/?autoplay=1"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      
+    ></iframe>
     </div>
+
     <section class="about" id="about">
       <h1 class="about-title">About this website</h1>
       <p class="about-text">

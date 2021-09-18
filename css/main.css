@@ -91,10 +91,9 @@ body {
   transition: color 200ms ease, background-color 200ms ease;
 }
 
-.language-option:hover, .language-option:focus {
+.language-option:hover {
   /* color: white;
   background-color: var(--color-4); */
-  outline: none;
   color: var(--color-3);
   background-color: black;
   transition: color 150ms ease, background-color 150ms ease;

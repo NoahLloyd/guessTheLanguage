@@ -3,7 +3,13 @@
   height: 9vw;
   display: inline-block;
   margin: 30px auto;
-  
+  filter: drop-shadow(2px 2px 2px var(--color-3));
+  transition: filter 200ms ease;
+}
+
+.logo:hover {
+  filter: drop-shadow(4px 4px 3px var(--color-2));
+  transition: filter 100ms ease;
 }
 
 .settings {
