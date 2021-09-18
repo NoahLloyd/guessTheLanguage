@@ -15,18 +15,22 @@ const createRandomUsername = async () => {
   let validName = true;
 
   const allNamesCombined = [firstName,lastName,username].join('').toLowerCase().split('')
-  for (let letterIndex = 0; letterIndex < allNamesCombined.lenght; letterIndex++) {
+  for (let letterIndex = 0; letterIndex < allNamesCombined.length; letterIndex++) {
     if ('abcdefghijklmnopqrstuvwxyz1234567890'.split('').includes(!allNamesCombined[letterIndex])) {
       validName = false
     }
   }
 
-  if (validName) {
+  // Just to have more frequent use of the "username"
+  const random = Math.random() > 0.25 ? true : false
+  if (validName && random) {
     // Gets the first name plus the first few characters of the last name and returns
     return firstName.toLowerCase() + lastName.slice(0, Math.floor(Math.random() * 3));
   } else {
-    // Returns anywhere from 5 characters of it, to the whole username
-    return username.slice(0,username.lenght - Math.floor(Math.random() * (username.length - 5)));
+    // Returns anywhere from 4 to 8 characters of the username
+    username = username.slice(0,username.length - Math.floor(Math.random() * (username.length - 4)))
+    return username.length > 8 ? username.slice(0,6) : username
+    return ;
   }
   return username
 };

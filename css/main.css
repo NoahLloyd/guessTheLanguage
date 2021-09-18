@@ -19,8 +19,41 @@ body {
   display: inline-block;
 }
 
-.title {
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.introduction {
   display: inline-block;
+  width: 46%;
+  margin: 0;
+}
+
+.score {
+    display: inline-block;
+  width: 46%;
+  margin: 0;
+}
+
+.score > article {
+  color: var(--color-3);
+  text-align: left;
+}
+
+.score > article > h2 {
+  text-align: center;
+  margin: auto 0;
+  vertical-align: middle;
+}
+
+.points {
+  vertical-align: middle;
+}
+
+.title {
   text-align: center;
   color: white;
 }

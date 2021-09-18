@@ -35,10 +35,9 @@
 
 
 
-@media (max-width: 1400) {
-  .navigation > li {
-    display: block;
-    margin: 100px;
-    background-color: red;
-  }
+@media (max-width: 1700px) {
+  .footer {
+    position: static;
+
+  }    
 }
