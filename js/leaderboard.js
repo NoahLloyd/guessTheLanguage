@@ -3,7 +3,6 @@ const getRandomPerson = async () => {
   if (response.ok) {
     // Get username
     const person = await response.json();
-    console.log(person);
     const firstName = person.results[0].name.first;
     const lastName = person.results[0].name.last;
     const username = person.results[0].login.username;
@@ -12,7 +11,6 @@ const getRandomPerson = async () => {
 };
 const createRandomUsername = async () => {
   [firstName, lastName, username] = await getRandomPerson();
-  console.log(firstName, lastName, username);
   // Checking if the name is with english characters only
   let validName = true;
 
@@ -23,7 +21,6 @@ const createRandomUsername = async () => {
     }
   }
 
-  console.log(validName)
   if (validName === true) {
     // Gets the first name plus the first few characters of the last name and returns
     return firstName.toLowerCase() + lastName.slice(0, Math.floor(Math.random() * 3));

@@ -1,6 +1,5 @@
 .scores {
   display: inline-block;
-  text-align: center;
   margin: 30px auto;
 
   font-size: 1.5rem;
@@ -12,6 +11,7 @@
 }
 
 .top-scores {
+  width: 100%;
   display: inline-block;
 }
 
@@ -19,22 +19,32 @@
   box-shadow: 5px 5px 7px 1px rgba(0, 0, 0, 0.2);
 
   /* background-color: var(--color-4); */
-  padding: 5px;
-  border: 2px solid var(--color-3);
+  padding: 0.3rem;
+  outline: 2px solid var(--color-3);
   display: block;
-  margin: 10px 0;
+  margin: 15px 0;
+}
+
+.leaderboard-index {
+  width: 1.7rem;
+  text-align: center;
+  padding-right: 6px;
+  border-right: 2px solid var(--color-4);
+}
+
+.leaderboard-name {
+  width: calc(100% - 1.7rem - 3rem - 15px);
+}
+
+.leaderboard-score {
+  text-align: right;
+  margin: 0;
+  width: 3rem;
 }
 
 .table-row > td {
   display: inline-block;
   color: white;
   font-size: 1.3rem;
-  margin: 0 auto;
-  padding: 0 auto;
-}
-
-.table-row > td+td+td {
-  text-align: right;
-  padding: auto;
-  margin: 0 0 0 auto;
+  white-space: nowrap;
 }
