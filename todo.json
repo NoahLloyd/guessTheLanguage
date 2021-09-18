@@ -1,0 +1,15 @@
+{
+    "Backend": {
+        "Translation": ["Set up the google api to translate a sentence", ""],
+        "Getting text": ["Use the linguatools, or find a better random word api with more common words"],
+        "Leaderboard": ["Create random names using random person api", "Create random scores and order them"],
+        "Settings": ["Make music in one file, or use an api for lo-fi", "Add the stop music option", ""]
+    },
+    "Frontend": {
+        "Animation": ["Add hover effects to more elements", "Add simple animations on load"],
+        "Color": ["Find better fonts, and use different fonts for different sections and elements"]
+    },
+    "Other": {
+        
+    }   
+}

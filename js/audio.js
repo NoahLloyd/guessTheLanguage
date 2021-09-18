@@ -3,6 +3,10 @@ const musicContainer = document.getElementById("music-container");
 const music = ["elegantlyDisconnected", "ready", "icedTea", "easy"];
 let musicOn = true;
 
+
+//TODO: Just make one audio file with all the songs and set it to loop,
+//TODO: Find out how to import it at very last and without causing disturbance
+
 const changeMusic = (previousSong) => {
   if (musicOn) {
     previousSong = previousSong.replace("/audio/", "").replace(".mp3", "");

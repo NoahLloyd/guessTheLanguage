@@ -13,12 +13,24 @@
   color: black;
   text-decoration: none;
   border-bottom: 2px solid #222288;
+  padding: 1px;
+  transition: padding 200ms ease-in-out, color 100ms;
+}
+
+.navigation > li > a:hover {
+  border-bottom: 3px solid #1111aa;
+  padding-bottom: 20px;
+  transition: padding 400ms ease-in-out, color 200ms;
 }
 
 .navigation > li {
+
   display: inline-block;
   margin-right: 20px;
+
 }
+
+
 
 @media (max-width: 1400) {
   .navigation > li {

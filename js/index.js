@@ -1,28 +1,3 @@
-const correct = document.getElementById("correct");
-const incorrect = document.getElementById("incorrect");
-const correctSound = new Audio('../audio/correct.mp3')
-const incorrectSound = new Audio('../audio/incorrect.mp3')
-let language = 'Latin'
-let soundsOn = true
-
-const languageGuess = (languageGuessed) => {
-  if (languageGuessed === language) {
-    displayVerificationOfGuess(correct);
-    return;
-  }
-  displayVerificationOfGuess(incorrect);
-};
-
-const displayVerificationOfGuess = (symbol) => {
-  if (soundsOn) {
-  symbol === correct ? correctSound.play() : incorrectSound.play()
-  }
-  symbol.classList.add("show");
-  setTimeout(() => {
-    symbol.classList.remove("show");
-  }, 500);
-};
-
 const translateText =  async (text) => {
   try {
   const translation = await fetch("https://google-translate1.p.rapidapi.com/language/translate/v2", {
@@ -45,9 +20,3 @@ console.log(translationJson)
     console.log(error)
   }
 }
-
-
-const toggleSounds = () => {
-  soundsOn = !soundsOn
-}
-// translateText('asd')
