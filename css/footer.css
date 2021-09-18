@@ -18,6 +18,9 @@
 }
 
 .navigation > li > a:hover {
+  cursor: pointer;
+  color: white;
+  text-shadow: 2px 2px 1px var(--color-2);
   border-bottom: 3px solid #1111aa;
   padding-bottom: 20px;
   transition: padding 400ms ease-in-out, color 200ms;
