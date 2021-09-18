@@ -4,9 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/logo/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/logo/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/logo/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/logo/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/logo/favicon-16x16.png"
+    />
     <link rel="manifest" href="/images/logo/site.webmanifest" />
     <title>Guess the language</title>
     <link rel="stylesheet" href="/css/global.css" />
@@ -19,6 +33,7 @@
     <script src="/js/verification.js" defer></script>
     <script src="/js/settings.js" defer></script>
     <script src="/js/leaderboard.js" defer></script>
+    <script src="/js/extendText.js" defer></script>
     <script src="/js/music.js" defer></script>
   </head>
   <body>
@@ -27,11 +42,24 @@
         <h1 class="settings-title">Settings</h1>
         <article class="settings-section">
           <h2 class="setting-title">Number of languages</h2>
-          <input type="range" id="languageAmountChoice" class="slider" value="10" />
+          <input
+            type="range"
+            id="languageAmountChoice"
+            class="slider"
+            value="10"
+          />
           <h4 id="languageAmountDispaly-container">
-            <span class="language-amount-choice-display" id="languageAmountChoiceDisplay">10</span>
+            <span
+              class="language-amount-choice-display"
+              id="languageAmountChoiceDisplay"
+              >10</span
+            >
             languages:
-            <span class="languageAmount-difficulty easy" id="languageAmount-difficulty">easy</span>
+            <span
+              class="languageAmount-difficulty easy"
+              id="languageAmount-difficulty"
+              >easy</span
+            >
           </h4>
           <h4 class="language-amount-error" id="languageAmountError">
             Minimum 3 languages required
@@ -62,12 +90,15 @@
             </div>
           </section>
         </article>
+      <img src="/images/logo/logo.png" alt="Logo for Guess the Language" class="logo">
+
       </section>
       <main class="main">
         <h1 class="title">Guess the language</h1>
         <p class="explanation">
-          With up to 100 different languages to guess, attempt to see which ones you might know.
-          There will be 3 different options on each language. See how many languages you can guess!
+          With up to 100 different languages to guess, attempt to see which ones
+          you might know. There will be 3 different options on each language.
+          See how many languages you can guess!
         </p>
         <div class="correct" id="correct">
           <svg
@@ -95,27 +126,89 @@
             />
           </svg>
         </div>
-        <article class="text-container">
+        <section class="text-box" id="textBox">
+        <article class="text-container" id="text" onclick="classList.add('extended')">
           <p class="text">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic excepturi, qui dicta
-            maxime unde labore facere voluptates vel odit quisquam quis impedit necessitatibus
-            cumque expedita dolore voluptas fugiat praesentium magnam! Porro omnis ipsam itaque
-            impedit quas nam, possimus natus id beatae, tempore blanditiis tempora dicta dolores
-            odit hic? Nobis illum perspiciatis atque deserunt rem iste sapiente unde adipisci cum
-            eligendi? Quasi consequatur aut voluptas culpa, amet ipsa quos ratione, exercitationem
-            architecto doloribus repellendus porro molestias odit quod harum, aperiam unde expedita
-            quidem. Officiis sequi numquam, ipsum aliquam voluptas rerum modi quas quaerat sunt
-            earum id et labore exercitationem maxime quibusdam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas,
+            quaerat. Ullam beatae repudiandae tempora vitae odit accusantium
+            tenetur tempore sit deleniti soluta labore repellendus, perferendis
+            necessitatibus quibusdam quod debitis culpa accusamus, veniam
+            molestiae! Ratione ut est iusto non harum, doloribus voluptatibus.
+            Recusandae pariatur tenetur nam numquam reprehenderit eveniet, quis
+            voluptas facilis quae magnam, architecto perspiciatis, ut minus
+            officiis neque omnis. Magnam quod qui beatae mollitia consectetur
+            repudiandae dolore culpa, quam tempore expedita modi impedit saepe
+            non amet iusto dolorum ullam fuga cum natus! Iste omnis rerum esse
+            dolore ab rem soluta illo minima doloremque aut magni consectetur
+            voluptas, eos ipsa unde sit quae quas doloribus non nostrum quo.
+            Ducimus, est! Dignissimos praesentium, nesciunt porro minus ex
+            maxime a placeat ipsum veniam ad perspiciatis voluptates aperiam ut
+            quod similique dicta molestias ea corporis earum ab nisi quaerat
+            sint ducimus. Sed obcaecati expedita dolor? Consequuntur nostrum
+            ullam aliquid adipisci? Deserunt laborum illum eius, quo alias quasi
+            et facere dolorum aliquid iusto cupiditate quibusdam possimus
+            doloribus perferendis accusamus accusantium ratione inventore
+            incidunt recusandae fugiat quos minima autem corrupti. Ipsum dolorem
+            aperiam exercitationem mollitia natus, saepe reiciendis consectetur
+            culpa sit nemo doloremque. Pariatur nemo itaque adipisci
+            repudiandae? Nisi doloribus enim quae? Ut ratione corporis
+            voluptatum laborum nobis commodi consequuntur! Ducimus quasi, animi
+            cum excepturi ipsum inventore sed tempora alias rerum, fugiat, in
+            omnis reiciendis velit voluptatem exercitationem! Molestiae cum
+            debitis magnam commodi in totam ullam, adipisci optio consequuntur
+            sunt minus neque beatae autem quos? Quasi esse iure, deserunt fugit
+            dolore mollitia reprehenderit ipsam praesentium provident doloribus
+            dignissimos ipsa deleniti facilis minima earum aut. Corporis maiores
+            quae nam doloremque hic recusandae rerum magni nihil voluptate ab
+            maxime voluptates, sed, error enim? Mollitia, incidunt! Hic
+            excepturi aliquid mollitia blanditiis libero, minima sit. Corrupti
+            doloribus est dolorem! Fuga obcaecati laborum, possimus atque odit
+            perferendis illum laudantium iure.
           </p>
         </article>
+        <div class="extend"><svg id="extend" onclick="document.getElementById('text').classList.add('extended')" width="48px" height="48px" viewBox="0 0 24 24" id="arrow_down" data-name="arrow down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs>
+            <clipPath id="clip-path">
+              <rect id="Mask" width="24" height="24" fill="none" stroke="#000" stroke-width="1"/>
+            </clipPath>
+          </defs>
+          <g id="_20x20_arrow-back--grey" data-name="20x20/arrow-back--grey" transform="translate(0 24) rotate(-90)">
+            <rect id="Mask-2" data-name="Mask" width="24" height="24" fill="none"/>
+            <g id="_20x20_arrow-back--grey-2" data-name="20x20/arrow-back--grey" clip-path="url(#clip-path)">
+              <g id="Group_2" data-name="Group 2" transform="translate(8 7)">
+                <path id="Rectangle" d="M0,6.586V0H6.586" transform="translate(0.686 5.157) rotate(-45)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.5"/>
+              </g>
+            </g>
+          </g>
+        </svg></div>
+        </section>
         <article class="language-options">
-          <button class="language-option" id="option1" onclick="onGuess(innerHTML)">Latin</button>
-          <button class="language-option" id="option2" onclick="onGuess(innerHTML)">English</button
-          ><button class="language-option" id="option3" onclick="onGuess(innerHTML)">French</button>
+          <button
+            class="language-option"
+            id="option1"
+            onclick="onGuess(innerHTML)"
+          >
+            Latin
+          </button>
+          <button
+            class="language-option"
+            id="option2"
+            onclick="onGuess(innerHTML)"
+          >
+            English</button
+          ><button
+            class="language-option"
+            id="option3"
+            onclick="onGuess(innerHTML)"
+          >
+            French
+          </button>
         </article>
         <section class="score">
           <article class="points">
-            <h4 class="points-label" id="pointsLabel">Points: <span id="pointsNumber" class="points-number">152</span></h4>
+            <h4 class="points-label" id="pointsLabel">
+              Points: <span id="pointsNumber" class="points-number">152</span>
+            </h4>
           </article>
         </section>
       </main>
@@ -125,42 +218,42 @@
           <tr class="table-row">
             <td>1</td>
             <td class="leaderboard-name">Lorem.</td>
-            <td class="leaderboard-score">Voluptas?</td>
+            <td class="leaderboard-score">0</td>
           </tr>
           <tr class="table-row">
             <td>2</td>
             <td class="leaderboard-name">Lorem.</td>
-            <td class="leaderboard-score">Tempora.</td>
+            <td class="leaderboard-score">0</td>
           </tr>
           <tr class="table-row">
             <td>3</td>
             <td class="leaderboard-name">Lorem.</td>
-            <td class="leaderboard-score">Distinctio!</td>
+            <td class="leaderboard-score">0</td>
           </tr>
           <tr class="table-row">
             <td>4</td>
             <td class="leaderboard-name">Lorem.</td>
-            <td class="leaderboard-score">Ut?</td>
+            <td class="leaderboard-score">0</td>
           </tr>
           <tr class="table-row">
             <td>5</td>
             <td class="leaderboard-name">Lorem.</td>
-            <td class="leaderboard-score">Dolor!</td>
+            <td class="leaderboard-score">0</td>
           </tr>
           <tr class="table-row">
             <td>6</td>
             <td class="leaderboard-name">Lorem.</td>
-            <td class="leaderboard-score">Voluptatem.</td>
+            <td class="leaderboard-score">0</td>
           </tr>
           <tr class="table-row">
             <td>7</td>
             <td class="leaderboard-name">Lorem.</td>
-            <td class="leaderboard-score">Itaque?</td>
+            <td class="leaderboard-score">0</td>
           </tr>
           <tr class="table-row">
             <td>8</td>
             <td class="leaderboard-name">Lorem.</td>
-            <td class="leaderboard-score">Fuga!</td>
+            <td class="leaderboard-score">0</td>
           </tr>
           <tr class="table-row">
             <td>9</td>
@@ -170,7 +263,7 @@
           <tr class="table-row">
             <td>10</td>
             <td class="leaderboard-name">Lorem.</td>
-            <td class="leaderboard-score">Blanditiis.</td>
+            <td class="leaderboard-score">0</td>
           </tr>
         </table>
       </section>
@@ -178,20 +271,27 @@
     <section class="about" id="about">
       <h1 class="about-title">About this website</h1>
       <p class="about-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat fugit molestiae voluptates
-        explicabo et nostrum eligendi. Quidem architecto molestias deleniti nisi quibusdam, amet
-        quia cupiditate commodi reiciendis illum. Cum voluptate modi aliquid omnis, ipsa rem dolor
-        asperiores velit consectetur nulla quis quibusdam tempore ab sed a! Deleniti cupiditate,
-        voluptatem veniam ducimus nisi laboriosam laudantium, eaque temporibus sunt, non odio quos.
-        Rem aut nisi distinctio error tenetur? Dolorum dicta commodi reprehenderit minima quod?
-        Inventore odio natus eum! Veniam laboriosam molestias optio eligendi eum aliquam ad dolore
-        magni, officiis nulla voluptatum illo quisquam tempore enim facilis facere. Blanditiis porro
-        quam velit mollitia.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat fugit
+        molestiae voluptates explicabo et nostrum eligendi. Quidem architecto
+        molestias deleniti nisi quibusdam, amet quia cupiditate commodi
+        reiciendis illum. Cum voluptate modi aliquid omnis, ipsa rem dolor
+        asperiores velit consectetur nulla quis quibusdam tempore ab sed a!
+        Deleniti cupiditate, voluptatem veniam ducimus nisi laboriosam
+        laudantium, eaque temporibus sunt, non odio quos. Rem aut nisi
+        distinctio error tenetur? Dolorum dicta commodi reprehenderit minima
+        quod? Inventore odio natus eum! Veniam laboriosam molestias optio
+        eligendi eum aliquam ad dolore magni, officiis nulla voluptatum illo
+        quisquam tempore enim facilis facere. Blanditiis porro quam velit
+        mollitia.
       </p>
     </section>
     <footer class="footer">
       <ul class="navigation">
-        <li><a href="./audio/music.html" target="_blank" rel="noopener noreferrer">Music</a></li>
+        <li>
+          <a href="./audio/music.html" target="_blank" rel="noopener noreferrer"
+            >Music</a
+          >
+        </li>
         <li>
           <a
             href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
@@ -201,7 +301,10 @@
           >
         </li>
         <li>
-          <a href="https://github.com/NoahLloyd" target="_blank" rel="noopener noreferrer"
+          <a
+            href="https://github.com/NoahLloyd"
+            target="_blank"
+            rel="noopener noreferrer"
             >Creator</a
           >
         </li>

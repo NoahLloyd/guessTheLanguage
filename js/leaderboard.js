@@ -10,38 +10,53 @@ const getRandomPerson = async () => {
     return [firstName, lastName, username];
   }
 };
-const createRandomUsername = (firstName, lastName, username) => {
-  // Checking if the name is with english characters only
+const createRandomUsername = async () => {
+  [firstName, lastName, username] = await getRandomPerson();
   console.log(firstName, lastName, username);
+  // Checking if the name is with english characters only
   let validName = true;
-  for (const letter in firstName.toLowerCase().split("")) {
-    if (!"abcdefghijklmnopqrstuvwxyz".includes(letter)) {
-      validName = false;
+
+  const allNamesCombined = (firstName+lastName+username).toLowerCase().split('')
+  for (let letterIndex = 0; letterIndex < allNamesCombined.lenght; letterIndex++) {
+    if (!'abcdefghijklmnopqrstuvwxyz1234567890 '.includes(allNamesCombined[letterIndex])) {
+      validName = false
     }
   }
 
-  for (const letter in lastName.toLowerCase().split("")) {
-    if (!"abcdefghijklmnopqrstuvwxyz".includes(letter)) {
-      validName = false;
-    }
-  }
-
+  console.log(validName)
   if (validName === true) {
-    // Gets the first name plus the first few characters of the last name
-    const randomUsername =
-      firstName.toString().toLowerCase() + lastName.slice(0, Math.floor(Math.random() * 3));
-    return randomUsername;
+    // Gets the first name plus the first few characters of the last name and returns
+    return firstName.toLowerCase() + lastName.slice(0, Math.floor(Math.random() * 3));
+  } else {
+    // Returns anywhere from 5 characters of it, to the whole username
+    return username.slice(0,username.lenght - Math.floor(Math.random() * (username.length - 5)));
   }
-  // Returns anywhere from 5 characters of it, to the whole username
-  const randomUsername = username.slice(
-    0,
-    username.lenght - Math.floor(Math.random() * (username.length - 5))
-  );
-  return randomUsername;
+  return username
 };
 
-async () => {
-  const person = getRandomPerson();
-  console.log(person);
-  console.log(createRandomUsername(person));
+// Uses index in order to sort properly
+const createRandomScore = (index) => {
+  // Inverses the index fx 9=1 and 4=6
+  index = 10 - index;
+
+  // Gives random score
+  if (index === 10) {
+    return 4000 + Math.floor(Math.random() * 300);
+  }
+  if (index < 5) {
+    return index * 50 + (index + 1) * Math.floor(Math.random() * 3) + 1500;
+  }
+  return index * 61 + (index + 1) * Math.floor(Math.random() * 50) + 2000;
 };
+
+const setLeaderboardContent = async () => {
+  const names = document.querySelectorAll(".leaderboard-name");
+  const scores = document.querySelectorAll(".leaderboard-score");
+
+  for (let i = 0; i < names.length; i++) {
+    names[i].textContent = await createRandomUsername();
+    scores[i].textContent = createRandomScore(i).toString();
+  }
+};
+
+setLeaderboardContent();
