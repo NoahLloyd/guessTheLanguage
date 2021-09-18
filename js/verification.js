@@ -7,6 +7,8 @@ const incorrectSound = new Audio('../audio/incorrect.mp3')
 let language = 'Latin'
 let soundsOn = true
 
+const languages = JSON.parse(languages)
+
 const displayVerificationOfGuess = (symbol) => {
   if (soundsOn) {
   symbol === correct ? correctSound.play() : incorrectSound.play()

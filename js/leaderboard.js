@@ -14,14 +14,14 @@ const createRandomUsername = async () => {
   // Checking if the name is with english characters only
   let validName = true;
 
-  const allNamesCombined = (firstName+lastName+username).toLowerCase().split('')
+  const allNamesCombined = [firstName,lastName,username].join('').toLowerCase().split('')
   for (let letterIndex = 0; letterIndex < allNamesCombined.lenght; letterIndex++) {
-    if (!'abcdefghijklmnopqrstuvwxyz1234567890 '.includes(allNamesCombined[letterIndex])) {
+    if ('abcdefghijklmnopqrstuvwxyz1234567890'.split('').includes(!allNamesCombined[letterIndex])) {
       validName = false
     }
   }
 
-  if (validName === true) {
+  if (validName) {
     // Gets the first name plus the first few characters of the last name and returns
     return firstName.toLowerCase() + lastName.slice(0, Math.floor(Math.random() * 3));
   } else {
@@ -38,12 +38,12 @@ const createRandomScore = (index) => {
 
   // Gives random score
   if (index === 10) {
-    return 4000 + Math.floor(Math.random() * 300);
+    return 14000 + Math.floor(Math.random() * 7000);
   }
   if (index < 5) {
-    return index * 50 + (index + 1) * Math.floor(Math.random() * 3) + 1500;
+    return index * 1000 + (index + 1) * Math.floor(Math.random() * 3) + 2000;
   }
-  return index * 61 + (index + 1) * Math.floor(Math.random() * 50) + 2000;
+  return index * 1220 + (index + 1) * Math.floor(Math.random() * 5) + 2000;
 };
 
 const setLeaderboardContent = async () => {

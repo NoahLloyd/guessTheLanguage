@@ -9,17 +9,6 @@ body {
   background-color: var(--color-1);
 }
 
-/* * Hide scroll bar but still be able to scroll */
-html {
-  scroll-behavior: smooth;
-  overflow: scroll;
-  overflow-x: hidden;
-}
-
-::-webkit-scrollbar {
-  width: 0; /* Remove scrollbar space */
-}
-
 .primary {
   height: 100vh;
   display: flex;
@@ -28,7 +17,7 @@ html {
 }
 
 .main {
-  width: 60%;
+  width: 60vw;
   text-align: center;
   margin: 0;
   display: inline-block;
@@ -41,26 +30,26 @@ html {
 }
 
 .explanation {
-  text-align: center;
+  width: 80%;
+  margin: 0 auto;  
   color: var(--color-3);
 }
 
 .text-box {
   box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.1);
-  height: 20.5rem;
+  height: 24.5rem;
   background-color: var(--color-2);
   padding: 20px 20px 0px 20px;
   border-radius: 20px;
   margin: 2% 0;
   text-align: left;
-  transition: height 100ms linear;
 }
 
 
 .text-container {
   width: 100%;
 
-  height: calc(20rem - 60px);
+  height: calc(24rem - 60px);
   overflow-y: scroll;
 }
 
