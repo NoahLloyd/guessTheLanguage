@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   overflow: hidden;
@@ -19,7 +15,7 @@ body {
 .main {
   width: 60vw;
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
   display: inline-block;
 }
 
@@ -117,8 +113,10 @@ body {
 
 @media (max-width: 1400px) {
   .primary {
-    display: block;
+    justify-content: baseline;
+    flex-direction: column;
     text-align: center;
+    height: fit-content;
   }
 
   .main {

@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="/css/settings.css" />
     <link rel="stylesheet" href="/css/footer.css" />
     <link rel="stylesheet" href="/css/about.css" />
-    <link rel="stylesheet" href="/css/checkmark.css">
+    <link rel="stylesheet" href="/css/checkmark.css" />
     <script src="/js/index.js" defer></script>
     <script src="/js/verification.js" defer></script>
     <script src="/js/settings.js" defer></script>
@@ -40,7 +40,7 @@
   </head>
   <body>
     <div class="primary">
-      <aside class="settings">
+      <section class="settings">
         <h1 class="settings-title">Settings</h1>
         <article class="settings-section">
           <h2 class="setting-title">Number of languages</h2>
@@ -71,10 +71,10 @@
           <h2 class="setting-title">Music and sounds</h2>
           <section class="toggle-audio">
             <div class="audio-toggle-container">
-            <label for="toggleMusic">Music</label>
+              <label for="toggleMusic">Music</label>
 
               <input
-              class="checkmark"
+                class="checkmark"
                 type="checkbox"
                 checked="true"
                 onclick="toggleMusic()"
@@ -83,10 +83,10 @@
               />
             </div>
             <div class="audio-toggle-container">
-            <label for="toggleSounds">Sounds</label>
+              <label for="toggleSounds">Sounds</label>
 
               <input
-              class="chackmark"
+                class="chackmark"
                 type="checkbox"
                 checked="true"
                 onchange="toggleSounds()"
@@ -96,19 +96,34 @@
             </div>
           </section>
         </article>
+        <iframe
+        id="music"
+        width="0"
+        height="0"
+        src="https://www.youtube.com/embed/5qap5aO4i9A/?autoplay=1"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      ></iframe>
         <img
           src="/images/logo/logo.png"
           alt="Logo for Guess the Language"
           class="logo"
         />
-      </aside>
+      </section>
       <main class="main">
+        <header class="title-score">
+          <section class="introduction">
         <h1 class="title">Guess the language</h1>
         <p class="explanation">
           With up to 100 different languages to guess, attempt to see which ones
           you might know. There will be 3 different options on each language.
           See how many languages you can guess!
         </p>
+      </section>
+      <section class="score">
+
+      </section>
+        </header>
         <div class="correct" id="correct">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -264,7 +279,7 @@
             French
           </button>
         </article>
-        <section class="score">
+        <section class="leaderboard">
           <article class="points">
             <h4 class="points-label" id="pointsLabel">
               Points: <span id="pointsNumber" class="points-number">152</span>
@@ -272,8 +287,8 @@
           </article>
         </section>
       </main>
-      <section class="scores">
-        <h2 class="scores-title">Top scores today</h2>
+      <section class="leaderboard">
+        <h2 class="leaderboard-title">Top scores today</h2>
         <table class="top-scores">
           <tr class="table-row">
             <td class="leaderboard-index">1</td>
@@ -327,15 +342,6 @@
           </tr>
         </table>
       </section>
-      <iframe
-      id="music"
-      width="0"
-      height="0"
-      src="https://www.youtube.com/embed/5qap5aO4i9A/?autoplay=1"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      
-    ></iframe>
     </div>
 
     <section class="about" id="about">
@@ -381,6 +387,5 @@
         <li><a href="#about">About</a></li>
       </ul>
     </footer>
-    <article id="music-container"></article>
   </body>
 </html>

@@ -1,16 +1,16 @@
-.scores {
+.leaderboard {
   display: inline-block;
   margin: 30px auto;
-
-  font-size: 1.5rem;
+  text-align: center;
 }
 
-.scores-title {
+.leaderboard-title {
   margin: 0;
   font-size: 1.7rem;
 }
 
 .top-scores {
+  margin: 0 auto;
   width: 100%;
   display: inline-block;
 }

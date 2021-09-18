@@ -7,21 +7,24 @@ const languageAmountError = document.getElementById('languageAmountError')
 
 const updateLanguageAmountDisplay = (value) => {
     // Handle attempts of setting less than 3 languages
-    if (parseInt(value) < 3) {
-        languageAmountChoice.value = '3';
-
-        //TODO: fix bug; Set the whole display container to display none
-        languageAmountDisplayContainer.style.display = 'none'
-        languageAmountError.style.display = 'block'
-            
+    if (parseInt(value) < 3) {  
+        languageAmountChoice.value = '3'
+        value = '3'
+        languageAmountDifficulty.textContent = 'Min 3'
+        
+        // Do the rest but with a timeout to give time to read
+        // Also adds a red color to emphasize that there has to be minimum 3 languages
         setTimeout(() => {
-            languageAmountChoiceDisplay.style.display = 'inline-block'
-            languageAmountChoiceDisplay.textContent = languageAmountChoice.value
-        languageAmountError.style.display = 'none'
-                
-        }, 2000)
+            languageAmountChoiceDisplay.textContent = value;
+            difficulty = valueDifficulty(parseInt(value))
+            languageAmountDifficulty.textContent = difficulty
+            languageAmountDifficulty.classList.remove('easy', 'medium', 'hard', 'extreme', 'ultimate')
+            languageAmountDifficulty.classList.add(difficulty)
+        },1000)
+        return
     }
-    // 
+
+    // Normal handler, executes all times but when there is chosen less than 3 languages
     languageAmountChoiceDisplay.textContent = value;
     const difficulty = valueDifficulty(parseInt(value))
     languageAmountDifficulty.textContent = difficulty
