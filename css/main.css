@@ -3,13 +3,13 @@ body {
   overflow: hidden;
   font-family: "Urbanist", sans-serif;
   background-color: var(--color-1);
+
 }
 
 .primary {
   height: 100vh;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-1);
 }
 
 .main {
