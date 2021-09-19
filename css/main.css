@@ -27,20 +27,14 @@ body {
 }
 
 .score {
-    display: inline-block;
-  width: 46%;
+  display: inline-block;
   margin: 0;
 }
 
-.score > article {
+.score > h2 {
   color: var(--color-3);
-  text-align: left;
-}
-
-.score > article > h2 {
-  text-align: center;
-  margin: auto 0;
-  vertical-align: middle;
+  display: inline-block;
+  margin: 0 2rem;
 }
 
 .points {
