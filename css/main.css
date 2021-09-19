@@ -26,12 +26,6 @@ body {
   flex-direction: column;
 }
 
-.introduction {
-  display: inline-block;
-  width: 46%;
-  margin: 0;
-}
-
 .score {
     display: inline-block;
   width: 46%;
@@ -58,9 +52,13 @@ body {
   color: white;
 }
 
-.explanation {
-  width: 80%;
-  margin: 0 auto;  
+.introduction {
+  width: 15rem;
+  margin: 0 auto;
+}
+
+.explanation  {
+  margin: 0;
   color: var(--color-3);
 }
 
